@@ -31,6 +31,15 @@
 extern "C" {
 #endif
 
+//#define DEBUG
+
+#ifdef DEBUG
+#define ESP_DBG os_printf
+#else
+#define ESP_DBG /\
+/os_printf
+#endif
+
 /** \defgroup System_APIs System APIs
   * @brief System APIs
   */

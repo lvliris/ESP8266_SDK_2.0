@@ -23,7 +23,6 @@ GEN_BINS= eagle.app.v6.bin
 SPECIAL_MKTARGETS=$(APP_MKTARGETS)
 SUBDIRS=    \
 	user    \
-	websocket \
 	driver	\
 	upgrade
 
@@ -49,7 +48,6 @@ endif
 
 COMPONENTS_eagle.app.v6 = \
 	user/libuser.a  \
-	websocket/libwebsocket.a \
 	driver/libdriver.a	\
 	upgrade/libupgrade.a
 
