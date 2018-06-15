@@ -1587,7 +1587,6 @@ int EnableMode(uint8 modeidx, uint8 *order)
 				//memcpy(head, order, addrLen + 2);
 				head[14] = 'H';
 				printf("enable mode OK!\n");
-				break;
 			}
 			else
 				head += strlen(head) + 1;
@@ -1631,7 +1630,6 @@ int DisableMode(uint8 modeidx, uint8 *order)
 				//memcpy(head, order, addrLen + 2);
 				head[14] = 'G';
 				printf("disable mode OK!\n");
-				break;
 			}
 			else
 				head += strlen(head) + 1;
@@ -2042,7 +2040,7 @@ void SendToClient(uint8 *data, uint8 len)
 			{
 				if((ret = send(client_sock, data, len, 0)) <= 0)
 				{
-					CloseClient(client_sock);
+					//CloseClient(client_sock);
 					MASTER_DBG("SendToClient task > send to %d failed!\n", client_sock);
 				}
 				else
@@ -2053,7 +2051,7 @@ void SendToClient(uint8 *data, uint8 len)
 		}
 		else
 		{
-			CloseClient(client_sock);
+			//CloseClient(client_sock);
 		}
 	}
 }
